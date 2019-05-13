@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.snapsproject.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\LudusAdmin\\Documents\\DavidFernsFire\\Snaps Project\\actions.json",
+      "action_manifest_path": "C:\\Users\\LudusAdmin\\Documents\\DavidFernsFire\\FireEscape\\actions.json",
       "strings": {
         "en_us": {
           "name": "Snaps Project [Testing]"

@@ -19,6 +19,10 @@ namespace Valve.VR
         
         private static SteamVR_Input_ActionSet_default p__default;
         
+        private static SteamVR_Input_ActionSet_Test p_Test;
+        
+        private static SteamVR_Input_ActionSet_Shooter p_Shooter;
+        
         public static SteamVR_Input_ActionSet_default _default
         {
             get
@@ -27,11 +31,31 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Input_ActionSet_Test Test
+        {
+            get
+            {
+                return SteamVR_Actions.p_Test.GetCopy<SteamVR_Input_ActionSet_Test>();
+            }
+        }
+        
+        public static SteamVR_Input_ActionSet_Shooter Shooter
+        {
+            get
+            {
+                return SteamVR_Actions.p_Shooter.GetCopy<SteamVR_Input_ActionSet_Shooter>();
+            }
+        }
+        
         private static void StartPreInitActionSets()
         {
             SteamVR_Actions.p__default = ((SteamVR_Input_ActionSet_default)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_default>("/actions/default")));
+            SteamVR_Actions.p_Test = ((SteamVR_Input_ActionSet_Test)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_Test>("/actions/Test")));
+            SteamVR_Actions.p_Shooter = ((SteamVR_Input_ActionSet_Shooter)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_Shooter>("/actions/Shooter")));
             Valve.VR.SteamVR_Input.actionSets = new Valve.VR.SteamVR_ActionSet[] {
-                    SteamVR_Actions._default};
+                    SteamVR_Actions._default,
+                    SteamVR_Actions.Test,
+                    SteamVR_Actions.Shooter};
         }
     }
 }
